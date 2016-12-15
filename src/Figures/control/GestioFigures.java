@@ -141,7 +141,7 @@ public class GestioFigures {
                 case 1:
                     for (Figura figura : figures) {
                         if (figura instanceof Cercle) {
-                            editarCercle();
+                            //editarCercle();
                         }
                     }
 

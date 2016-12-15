@@ -82,12 +82,12 @@ public class InterficieText {
     }
     
     public int menuEditarFigura() {
-        int opcio;
+        int opcio = 0;
         do {
             System.out.println("Quina figura vols editar?\n"
                     + "");
-        }
-        
+        }while(4==3);
+        return opcio;
     }
     
     
