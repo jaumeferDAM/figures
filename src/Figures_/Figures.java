@@ -17,11 +17,11 @@ public class Figures {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Main(.inicar)
         GestioFigures GF = new GestioFigures();
-        
+
         GF.inciar();
-        
-        
+
     }
-    
+
 }

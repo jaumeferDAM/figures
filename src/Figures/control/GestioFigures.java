@@ -23,16 +23,16 @@ public class GestioFigures {
     public ArrayList<Figura> figures = new ArrayList<>();
     public InterficieText it = new InterficieText();
 
-    /*
-    * Comença el programa
+    /**
+     * Comença el programa
      */
     public void inciar() {
         SeleccionarOpcioMenu();
     }
 
-    /*
-    * Menu incial on es demana un int i es fa un switch per saber si es vol 
-    crear una figura, veure figures creades o editar figures.
+    /**
+     * Menu incial on es demana un int i es fa un switch per saber si es vol
+     * crear una figura, veure figures creades o editar figures.
      */
     public void SeleccionarOpcioMenu() {
         int accio = it.menuInicial();
@@ -56,6 +56,10 @@ public class GestioFigures {
         } while (true);
     }
 
+    /**
+     * Menu per crear figures on es demana un int per seleccionar quina figura
+     * es vol crear.
+     */
     public void crearFigures() {
         int accior = it.menu();
         do {
@@ -81,10 +85,12 @@ public class GestioFigures {
             }
         } while (true);
     }
-/*
-    Menu per veure figures on es demana un int per seleccionar quina figura 
-    es vol veure.
-    */
+
+    /**
+     *
+     * Menu per veure figures on es demana un int per seleccionar quina figura
+     * es vol veure.
+     */
     public void veureFigures() {
         int accio = it.menuVeureFigura();
         do {
@@ -133,6 +139,10 @@ public class GestioFigures {
         } while (true);
     }
 
+    /**
+     * Menu per editar figures on es demana un int per seleccionar quina figura
+     * es vol editar.
+     */
     public void editarFigura() {
         int accio = it.menuEditarFigura();
         do {
@@ -141,7 +151,7 @@ public class GestioFigures {
                 case 1:
                     for (Figura figura : figures) {
                         if (figura instanceof Cercle) {
-                            //editarCercle();
+                            editarCercle();
                         }
                     }
 
@@ -211,6 +221,14 @@ public class GestioFigures {
         figures.add(trapezi);
         System.out.println("Figura creada correctament");
         SeleccionarOpcioMenu();
+    }
+
+    public void editarCercle() {
+        for (Figura figure : figures) {
+            if (figure instanceof Cercle) {
+                ((Cercle) figure).setRadi(it.radi());
+            }
+        }
     }
 
     /**

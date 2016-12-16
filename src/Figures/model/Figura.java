@@ -12,11 +12,15 @@ import java.text.DecimalFormat;
  * @author Sonia
  */
 public abstract class Figura {
-String nom;
+    //Variable(nom tenen totes les figures).
+
+    String nom;
     //DecimalFormat per tenir maxim 2 decimals.
     protected DecimalFormat df = new DecimalFormat("#.##");
 
     /**
+     * Constructor
+     *
      * @param nom
      */
     public Figura(String nom) {
@@ -24,11 +28,17 @@ String nom;
     }
 
     /**
+     * Metode per calcular el perimetre que s'implementara(override) en les
+     * herencies d'aquesta classe.
+     *
      * @return
      */
     public abstract double calculaPerimetre();
 
     /**
+     * Metode per calcular l'area que s'implementara(override) en les herencies
+     * d'aquesta classe.
+     *
      * @return
      */
     public abstract double calculaArea();
@@ -40,8 +50,3 @@ String nom;
         return nom;
     }
 }
-    
-    
-    
-    
-

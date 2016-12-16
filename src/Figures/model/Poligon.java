@@ -5,8 +5,8 @@ package Figures.model;
  * @author ALUMNEDAM
  */
 public abstract class Poligon extends Figura {
+//Varaibles
 
-    
     protected int costats;
 
     public int getLados() {
@@ -18,6 +18,8 @@ public abstract class Poligon extends Figura {
     }
 
     /**
+     * Constructor
+     *
      * @param nom
      */
     public Poligon(String nom) {
@@ -28,7 +30,7 @@ public abstract class Poligon extends Figura {
      * @param nom
      * @param costats
      */
-    public Poligon(String nom,int costats) {
+    public Poligon(String nom, int costats) {
         super(nom);
         this.costats = costats;
     }

@@ -10,10 +10,12 @@ package Figures.model;
  * @author Sonia
  */
 public class Trapezi extends NoRegular {
+//Variables
 
     private double altura;
 
     /**
+     * Constructor.
      *
      * @param nom
      * @param costats
@@ -33,14 +35,24 @@ public class Trapezi extends NoRegular {
         this.altura = altura;
     }
 
-    //TODO control.calcularArea();
-    //TODO control.demanarCostatMenor();
-    //,,     ,,   .demanarCostatMayor();
+    //TODO calcularArea();
+    //TODO demanarCostatMenor();
+    //    .demanarCostatMayor();
+    /**
+     * Metode per calcular l'area del trapezi.
+     *
+     * @return
+     */
     @Override
     public double calculaArea() {
         return ((midaCostats[0] + midaCostats[1]) / 2) * altura;
     }
 
+    /**
+     * Metode per calcular el perimetre del trapezi.
+     *
+     * @return
+     */
     @Override
     public double calculaPerimetre() {
         return (midaCostats[0] + midaCostats[1] + midaCostats[2] + midaCostats[3]);
